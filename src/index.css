@@ -1,0 +1,521 @@
+/* Base styles */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+    color: #333;
+    line-height: 1.5;
+}
+
+/* Responsive container */
+.container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 24px;
+}
+
+/* Main content styles */
+.main-content {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Header styles */
+.header h1 {
+    font-size: 2.5em;
+    margin-bottom: 16px;
+}
+
+.header p {
+    color: #777;
+    font-size: 1.1em;
+}
+
+/* Search form styles */
+.search-form {
+    display: flex;
+    margin-bottom: 24px;
+}
+
+.search-input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #333;
+}
+
+.search-button {
+    padding: 12px 24px;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.search-button:hover {
+    background-color: #555;
+}
+
+/* Book grid styles */
+.book-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 24px;
+}
+
+.book-card {
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.book-card:hover {
+    transform: translateY(-5px);
+}
+
+.book-link {
+    position: absolute;
+    inset: 0;
+    z-index: 10;
+}
+
+.book-content {
+    padding: 24px;
+}
+
+.book-stats {
+    display: flex;
+    gap: 12px;
+    color: #777;
+    margin-top: 12px;
+    font-size: 0.9em;
+}
+
+.book-footer {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 24px;
+    border-top: 1px solid #eee;
+}
+
+.view-button {
+    background: none;
+    border: none;
+    color: #333;
+    cursor: pointer;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.view-button:hover {
+    color: #555;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 24px;
+}
+
+.pagination-link,
+.pagination-previous,
+.pagination-next {
+    padding: 12px 16px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.pagination-link.active,
+.pagination-link:hover,
+.pagination-previous:hover,
+.pagination-next:hover {
+    background: #333;
+    color: #fff;
+}
+
+/* Sidebar styles */
+.sidebar {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Create thread styles */
+.create-thread h2 {
+    font-size: 1.8em;
+}
+
+.create-thread p {
+    color: #777;
+    font-size: 1.1em;
+}
+
+.thread-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.thread-form input {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+}
+
+.thread-form input:focus {
+    border-color: #333;
+}
+
+.thread-form button {
+    padding: 12px;
+    border: none;
+    background: #333;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.thread-form button:hover {
+    background-color: #555;
+}
+
+.recent-threads h2 {
+    font-size: 1.8em;
+    margin-bottom: 24px;
+}
+
+.threads-list {
+    max-height: 400px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.thread-card {
+    background: #fff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.thread-card:hover {
+    transform: translateX(5px);
+}
+
+.thread-card a {
+    font-weight: bold;
+    text-decoration: none;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.thread-card a:hover {
+    color: #555;
+}
+
+.thread-stats {
+    display: flex;
+    gap: 16px;
+    color: #777;
+    margin-top: 12px;
+    font-size: 0.9em;
+}
+
+.navbar {
+	width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    background-color: #fff;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-bottom: 2px solid #eee;
+}
+
+.navbar-title {
+    font-size: 2rem;
+    margin: 0;
+}
+
+.navbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.sign-out-button {
+    padding: 12px 24px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background-color 0.3s ease;
+}
+
+.sign-out-button:hover {
+    background-color: #555;
+}
+
+.notification-bell {
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #333;
+    transition: color 0.3s ease;
+}
+
+.notification-bell:hover {
+    color: #555;
+}
+
+.thread-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.thread-container h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.reply-form {
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.form-textarea {
+    width: 90%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    resize: vertical;
+}
+
+.form-button {
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.form-button:hover {
+    background-color: #555;
+}
+
+.replies-container {
+    margin-top: 2rem;
+}
+
+.reply-item {
+    background-color: #f5f5f5;
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+}
+
+.reply-author {
+    font-size: 0.9rem;
+    color: #777;
+    margin-top: 0.5rem;
+}
+
+/* Media queries for responsive design */
+
+/* Tablet and smaller devices */
+@media (max-width: 768px) {
+	
+	.container {
+		padding: 16px;
+	}
+ 
+	.book-grid {
+		grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+	}
+ 
+	.navbar-title {
+		font-size: 1.5rem;
+	}
+ 
+	.navbar-actions {
+		gap: 16px;
+	}
+ }
+ 
+
+ /*reg*/
+ .register-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f5f5f5;
+	padding: 16px;
+  }
+  
+  .register-card {
+	background: #fff;
+	padding: 32px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 400px;
+  }
+  
+  .register-title {
+	font-size: 1.5em;
+	margin-bottom: 16px;
+  }
+  
+  .register-form .form-group {
+	margin-bottom: 16px;
+  }
+  
+  .form-label {
+	display: block;
+	margin-bottom: 8px;
+	font-weight: bold;
+  }
+  
+  .form-input {
+	width: 100%;
+	padding: 8px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	outline: none;
+  }
+  
+  .form-button {
+	width: 100%;
+	padding: 12px;
+	border: none;
+	background: #333;
+	color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+	font-size: 1em;
+  }
+  
+  .form-footer {
+	margin-top: 16px;
+	text-align: center;
+  }
+  
+  .form-link {
+	color: #333;
+	text-decoration: none;
+  }
+  
+  .form-link:hover {
+	text-decoration: underline;
+  }
+
+  .login-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100vh;
+	background-color: #f5f5f5;
+	padding: 16px;
+  }
+  
+  .login-card {
+	background: #fff;
+	padding: 32px;
+	border-radius: 8px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+	width: 100%;
+	max-width: 400px;
+  }
+  
+  .login-title {
+	font-size: 1.5em;
+	margin-bottom: 16px;
+  }
+  
+  .login-form .form-group {
+	margin-bottom: 16px;
+  }
+  
+ /* Mobile devices */
+ @media (max-width: 480px) {
+	
+
+	.header h1 {
+		font-size: 2em;
+	}
+ 
+	.book-grid {
+		grid-template-columns: 1fr;
+	}
+ 
+	.search-form {
+		flex-direction: column;
+	}
+ 
+	.search-input {
+		border-radius: 8px;
+		margin-bottom: 12px;
+	}
+ 
+	.search-button {
+		border-radius: 8px;
+	}
+ 
+
+	.thread-container {
+		padding: 10px;
+	}
+ 
+	.form-textarea {
+		width: 100%;
+	}
+ }
